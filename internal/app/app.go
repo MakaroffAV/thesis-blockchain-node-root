@@ -14,7 +14,7 @@ func RunRootNode() {
 	for _, route := range rts.GetRoutes() {
 		http.HandleFunc(route.Path, route.Handler)
 	}
-
+	
 	log.Fatal(http.ListenAndServe("0.0.0.0:2605", nil))
 
 }
